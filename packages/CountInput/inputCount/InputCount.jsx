@@ -5,7 +5,7 @@ const Demo = (props) => {
   return (
     <>
       <div style={{ width: '500px', margin: '30px' }}>
-        <InputCount maxLimit={200} defaultValue="12345" inputType="textarea" rows={5} placeholder="请输入" />
+        <InputCount maxLimit={200} defaultValue="大宝" inputType="textarea" rows={5} placeholder="请输入" />
       </div>
       <div style={{ width: '500px', margin: '30px' }}>
         <InputCount maxLimit={20}  placeholder="请输入" />
