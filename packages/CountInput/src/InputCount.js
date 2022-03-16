@@ -1,16 +1,16 @@
-import React, { useState, useEffect, forwardRef  } from 'react';
+import React, { useState, useEffect  } from 'react';
 import { Input } from 'antd';
 import propTypes from 'prop-types';
 
 const { TextArea } = Input;
 
-const InputCount = forwardRef(({
+const InputCount = ({
   inputType,
   maxLimit,
   onChange,
   defaultValue,
   ...otherProps
-}, ref) => {
+}) => {
 	const [curNum, setCurNum] = useState(0);
   const [value, setValue] = useState('');
   useEffect(() => {
@@ -25,12 +25,7 @@ const InputCount = forwardRef(({
   };
   const InputCountProps = {
     maxLength: maxLimit || null,
-    suffix: maxLimit ? (
-      <span>
-        <span style={{ opacity: '0.45' }}>{curNum}</span>
-        {`/${maxLimit}`}
-      </span>
-    ) : null,
+    suffix: maxLimit ? <span style={{ opacity: '0.45' }}>{`${curNum}/${maxLimit}`}</span> : null,
     onChange: (e) => {
       onChanges(e);
     },
@@ -42,10 +37,9 @@ const InputCount = forwardRef(({
       <div style={{ position: 'relative' }}>
         <TextArea {...InputCountProps} />
         <span
-          style={({ right: '10px', bottom: '5px', lineHeight: '20px', position: 'absolute' })}
+          style={({  position: 'absolute', right: '10px', bottom: '5px', lineHeight: '20px', opacity: '0.45' })}
         >
-          <span style={{ opacity: '0.45' }}>{curNum}</span>
-          {`/${maxLimit}`}
+          {`${curNum}/${maxLimit}`}
         </span>
       </div>
     );
@@ -55,7 +49,7 @@ const InputCount = forwardRef(({
       <Input {...InputCountProps} />
     </>
   );
-})
+}
 
 InputCount.defaultProps = {
   inputType: 'input',
