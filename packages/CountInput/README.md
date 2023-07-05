@@ -1,4 +1,3 @@
-# nuomi 诺诺网大前端业务组件库
 # CountInput
 
 ### 特点

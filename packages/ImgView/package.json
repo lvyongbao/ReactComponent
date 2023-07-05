@@ -1,5 +1,5 @@
 {
-  "name": "inputcount",
+  "name": "imgview",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -10,15 +10,15 @@
   },
   "keywords": [
     "antd",
-    "InputCount"
+    "ImgView"
   ],
   "author": "lvyongbao",
   "license": "ISC",
   "maintainers": [
-    "dabao"
+    "DABAO <1050185549@qq.com>"
   ],
   "contributors": [
-    "dabao"
+    "DABAO <1050185549@qq.com>"
   ],
   "files": [
     "/dist"
